@@ -1,0 +1,32 @@
+[
+  {
+    "title": "NCS – Energy Wave",
+    "artist": "NCS",
+    "genre": "EDM",
+    "url": "music/energy-wave.mp3"
+  },
+  {
+    "title": "NCS – Neon Sky",
+    "artist": "NCS",
+    "genre": "EDM",
+    "url": "music/neon-sky.mp3"
+  },
+  {
+    "title": "Free Beat – Night Drive",
+    "artist": "Free Beat",
+    "genre": "Chill",
+    "url": "music/night-drive.mp3"
+  },
+  {
+    "title": "DJ Free – Midnight Bass",
+    "artist": "DJ Free",
+    "genre": "DJ",
+    "url": "music/midnight-bass.mp3"
+  },
+  {
+    "title": "LoFi Free – Rainy Window",
+    "artist": "LoFi Free",
+    "genre": "LoFi",
+    "url": "music/rainy-window.mp3"
+  }
+]

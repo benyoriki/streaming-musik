@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>@benyoriki Music</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <h1>NEON MUSIC</h1>
+
+    <div class="top-actions">
+      <input type="text" id="search" placeholder="Cari lagu...">
+
+      <!-- SOCIAL ICONS -->
+      <div class="social-icons">
+        <a href="https://www.instagram.com/benyoriki/?igsh=cGZkOXpuN2JyYjAy#" target="_blank" class="icon ig">IG</a>
+        <a href="https://www.facebook.com/benyo.hermawan/" target="_blank" class="icon fb">FB</a>
+        <a href="https://www.youtube.com/@rikihermawan8103" target="_blank" class="icon yt">YT</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- GENRE -->
+  <div class="genre-bar" id="genreBar"></div>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- PLAYLIST -->
+    <aside class="sidebar">
+      <ul class="playlist" id="playlist"></ul>
+    </aside>
+
+    <!-- CENTER STAGE -->
+    <section class="content">
+  <div class="space-stage" id="spaceStage">
+    <div class="orb-core"></div>
+
+    <div class="orbit orbit-1"></div>
+    <div class="orbit orbit-2"></div>
+
+    <div class="energy-pulse"></div>
+
+    <canvas id="stars"></canvas>
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- PLAYER -->
+  <footer class="player">
+
+    <div class="player-top">
+      <div class="track">
+        <strong id="title">—</strong>
+        <span id="artist">Free Music</span>
+      </div>
+
+      <div class="controls">
+        <button id="prev">⏮</button>
+        <button id="play" class="play">▶</button>
+        <button id="next">⏭</button>
+      </div>
+
+      <div class="volume-box">
+        🔊
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
+
+    <div class="player-bottom">
+      <input type="range" id="progress" min="0" value="0" step="0.1">
+    </div>
+
+    <canvas id="visualizer"></canvas>
+    <audio id="audio"></audio>
+
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
