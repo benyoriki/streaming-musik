@@ -370,3 +370,29 @@ input[type=range]::-webkit-slider-thumb{
   0%{transform:scale(.8);opacity:.8;}
   100%{transform:scale(1.4);opacity:0;}
 }
+
+/* =========================
+   CLOCK DATE (NO LAYOUT CHANGE)
+   ========================= */
+.topbar{
+  position:relative;
+}
+
+.clock-date{
+  position:absolute;
+  top:42px;
+  left:12px;
+  font-size:12px;
+  color:#00ff66;
+  opacity:.85;
+  text-shadow:0 0 8px #00ff66;
+  pointer-events:none;
+}
+
+@media(max-width:768px){
+  .clock-date{
+    top:38px;
+    font-size:11px;
+  }
+}
+
