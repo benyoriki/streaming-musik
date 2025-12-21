@@ -13,12 +13,16 @@
 
   <!-- TOP BAR -->
   <header class="topbar">
-    <h1>R MUSIK STREMING</h1>
+    <div class="title-box">
+      <h1>R MUSIK STREMING</h1>
+      <div id="clock-date" class="clock-date">
+        00:00 ---- 00/00/0000
+      </div>
+    </div>
 
     <div class="top-actions">
       <input type="text" id="search" placeholder="Cari lagu...">
 
-      <!-- SOCIAL ICONS -->
       <div class="social-icons">
         <a href="https://www.instagram.com/benyoriki/?igsh=cGZkOXpuN2JyYjAy#" target="_blank" class="icon ig">IG</a>
         <a href="https://www.facebook.com/benyo.hermawan/" target="_blank" class="icon fb">FB</a>
@@ -33,25 +37,19 @@
   <!-- MAIN -->
   <main class="main">
 
-    <!-- PLAYLIST -->
     <aside class="sidebar">
       <ul class="playlist" id="playlist"></ul>
     </aside>
 
-    <!-- CENTER STAGE -->
     <section class="content">
-  <div class="space-stage" id="spaceStage">
-    <div class="orb-core"></div>
-
-    <div class="orbit orbit-1"></div>
-    <div class="orbit orbit-2"></div>
-
-    <div class="energy-pulse"></div>
-
-    <canvas id="stars"></canvas>
-  </div>
-</section>
-
+      <div class="space-stage" id="spaceStage">
+        <div class="orb-core"></div>
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="energy-pulse"></div>
+        <canvas id="stars"></canvas>
+      </div>
+    </section>
 
   </main>
 
@@ -87,14 +85,6 @@
 
 </div>
 
-
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
