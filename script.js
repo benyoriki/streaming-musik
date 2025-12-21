@@ -158,3 +158,30 @@ const data = new Uint8Array(analyser.frequencyBinCount);
     ctx.fillRect(i*w, canvas.height - v/2, w-2, v/2);
   });
 })();
+
+/* =========================
+   CLOCK & DATE REAL TIME
+   ========================= */
+const clockEl = document.getElementById("clock-date");
+
+function updateClock(){
+  const now = new Date();
+
+  const jam   = String(now.getHours()).padStart(2,"0");
+  const menit= String(now.getMinutes()).padStart(2,"0");
+
+  const hariNama = [
+    "Minggu","Senin","Selasa","Rabu",
+    "Kamis","Jumat","Sabtu"
+  ];
+
+  const hari = hariNama[now.getDay()];
+  const tgl  = String(now.getDate()).padStart(2,"0");
+  const bln  = String(now.getMonth()+1).padStart(2,"0");
+  const thn  = now.getFullYear();
+
+  clockEl.textContent = `${jam}:${menit} ${hari} ${tgl}/${bln}/${thn}`;
+}
+
+updateClock();
+setInterval(updateClock, 1000);
