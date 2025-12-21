@@ -29,7 +29,9 @@ body{
   white-space:nowrap;
   text-shadow:0 0 12px #00ff66;
 }
+/* ⬇ TAMBAHAN TANPA MERUSAK LAYOUT */
 
+/* ⬆ END TAMBAHAN */
 /* SEARCH + ICON */
 .top-actions{
   display:flex;
@@ -371,18 +373,20 @@ input[type=range]::-webkit-slider-thumb{
   100%{transform:scale(1.4);opacity:0;}
 }
 
+
+
+
 /* =========================
-   CLOCK DATE (NO LAYOUT CHANGE)
+   CLOCK DATE (AMAN – NO LAYOUT SHIFT)
    ========================= */
 .topbar{
-  position:relative;
+  position:relative; /* agar absolute clock nempel di header */
 }
 
 .clock-date{
-  position:absolute;
-  top:48px;
+ 
   left:12px;
-  font-size:12px;
+  font-size:20px;
   color:#00ff66;
   opacity:.85;
   text-shadow:0 0 8px #00ff66;
@@ -395,7 +399,4 @@ input[type=range]::-webkit-slider-thumb{
     font-size:11px;
   }
 }
-
-
-
 
