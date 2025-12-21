@@ -160,28 +160,35 @@ const data = new Uint8Array(analyser.frequencyBinCount);
 })();
 
 /* =========================
-   CLOCK & DATE REAL TIME
+   CLOCK & DATE (WITH SECONDS)
    ========================= */
-const clockEl = document.getElementById("clock-date");
+const topbar = document.querySelector(".topbar");
+if(topbar){
+  const clockEl = document.createElement("div");
+  clockEl.className = "clock-date";
+  topbar.appendChild(clockEl);
 
-function updateClock(){
-  const now = new Date();
+  function updateClock(){
+    const now = new Date();
 
-  const jam   = String(now.getHours()).padStart(2,"0");
-  const menit= String(now.getMinutes()).padStart(2,"0");
+    const jam    = String(now.getHours()).padStart(2,"0");
+    const menit = String(now.getMinutes()).padStart(2,"0");
+    const detik = String(now.getSeconds()).padStart(2,"0");
 
-  const hariNama = [
-    "Minggu","Senin","Selasa","Rabu",
-    "Kamis","Jumat","Sabtu"
-  ];
+    const hariNama = [
+      "Minggu","Senin","Selasa",
+      "Rabu","Kamis","Jumat","Sabtu"
+    ];
 
-  const hari = hariNama[now.getDay()];
-  const tgl  = String(now.getDate()).padStart(2,"0");
-  const bln  = String(now.getMonth()+1).padStart(2,"0");
-  const thn  = now.getFullYear();
+    const hari = hariNama[now.getDay()];
+    const tgl  = String(now.getDate()).padStart(2,"0");
+    const bln  = String(now.getMonth()+1).padStart(2,"0");
+    const thn  = now.getFullYear();
 
-  clockEl.textContent = `${jam}:${menit} ${hari} ${tgl}/${bln}/${thn}`;
+    clockEl.textContent =
+      `${jam}:${menit}:${detik} ${hari} ${tgl}/${bln}/${thn}`;
+  }
+
+  updateClock();
+  setInterval(updateClock,1000);
 }
-
-updateClock();
-setInterval(updateClock, 1000);
